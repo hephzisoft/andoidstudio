@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadBooks">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/back_btn"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#796465"
+                app:icon="@drawable/ic_baseline_arrow_back_ios_24" />
+
+            <TextView
+                android:id="@+id/book_names"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center|left"
+                android:padding="10dp"
+                android:text="Lorem ipsum dolor sit amet consectetur, adipiscing elit porttitor massa."
+                android:textAllCaps="true"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/book_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit iaculis eleifend felis luctus dictum, aptent orci risus mattis nibh vivamus varius proin pellentesque pretium. Sodales dis senectus vulputate facilisi sed vestibulum, per platea dignissim commodo ultrices nisl, eu posuere penatibus augue cras. Nascetur purus mauris rhoncus nec ac tristique integer turpis, cubilia lectus semper et tincidunt auctor sem vitae, netus parturient faucibus facilisis vel porta tempor. Fames libero pharetra magnis id fringilla montes mus nostra vehicula litora quisque ornare, molestie sollicitudin torquent ad habitasse velit mi condimentum natoque odio lacus. In conubia class taciti venenatis lacinia mollis laoreet habitant, himenaeos nunc ultricies neque aliquam aliquet imperdiet egestas, primis sagittis scelerisque donec dui cum gravida. Suspendisse nam sociis accumsan potenti elementum suscipit blandit, tortor a non nisi erat eget rutrum congue, nullam bibendum leo eros dapibus urna. Massa viverra metus convallis consequat quam arcu duis, sapien ridiculus fusce quis volutpat justo, dictumst morbi diam placerat hendrerit praesent. Ut hac aenean interdum enim malesuada nulla sociosqu ante maecenas cursus tempus fermentum, feugiat inceptos lobortis ullamcorper phasellus porttitor ligula tellus curae magna curabitur, euismod at pulvinar est etiam himenaeos lectus libero cubilia nibh cum. Justo potenti sociis odio morbi dapibus facilisis, inceptos consequat a quisque ad eget, vivamus hendrerit auctor sem senectus. Montes dictumst tincidunt mus tempor quis convallis, ultrices posuere erat litora lacinia parturient, natoque neque placerat habitant tortor. Fames proin enim dignissim magnis purus mauris vel malesuada, suscipit vehicula cras urna blandit in fermentum facilisi accumsan, et velit habitasse venenatis pretium ornare semper. Dictum varius integer mollis condimentum nunc lacus metus sodales nostra, pellentesque risus pulvinar ligula taciti bibendum fringilla volutpat, viverra ridiculus leo sociosqu vitae nisi aptent duis. Gravida dis nullam fusce rhoncus donec porta non interdum, nisl ullamcorper eleifend curae orci cursus id sollicitudin, lobortis feugiat mattis elementum congue vulputate dui. Porttitor etiam sapien massa netus hac est luctus praesent, ante suspendisse class magna nam turpis tellus maecenas nec, phasellus platea tristique imperdiet faucibus arcu eros. Diam scelerisque tempus sed pharetra primis ultricies iaculis sagittis euismod felis molestie aliquet conubia quam ac ut, egestas per eu augue penatibus vestibulum aliquam torquent commodo laoreet aenean mi rutrum at nascetur. Curabitur nulla vehicula quisque ridiculus est consequat pharetra, suscipit ante venenatis nec aliquet et, magnis vestibulum dis mi orci sapien. Curae facilisi pellentesque convallis rhoncus taciti turpis in sagittis dapibus dui lacus scelerisque, cubilia magna sociis vivamus mattis montes congue nam posuere sodales. Sem ac quis ut laoreet mauris nullam habitant libero, pretium lectus inceptos massa tempor platea porta proin litora, parturient molestie auctor habitasse id eget faucibus. Enim senectus donec fermentum vitae volutpat odio vulputate, purus diam rutrum risus erat ultrices, aptent velit natoque non porttitor augue. Bibendum nostra fusce lacinia luctus phasellus conubia tempus neque class tellus commodo urna metus etiam aliquam, himenaeos torquent duis penatibus at interdum sed malesuada dictumst suspendisse justo nibh primis. A ad dictum maecenas semper condimentum pulvinar, netus accumsan praesent nulla potenti ullamcorper ligula, facilisis nisi fames cursus integer. Arcu eleifend iaculis placerat, tortor fringilla."
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

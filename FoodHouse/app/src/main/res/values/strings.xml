@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FoodHouse</string>
+    <string name="login">Get Started</string>
+    <string name="hot_deal">Hot Deal</string>
+    <string name="ginger_and_garlic_stew">Ginger and Garlic Stew</string>
+    <string name="todo">TODO</string>
+</resources>

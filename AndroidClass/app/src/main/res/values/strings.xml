@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android Class</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin laoreet metus sed arcu venenatis, quis sodales dolor molestie. Sed accumsan nec urna in aliquet. Morbi eget posuere velit. Aliquam eget sem velit. Nunc dictum finibus tortor, ut aliquet dolor consequat eget. Maecenas dapibus cursus luctus. Vivamus venenatis purus non urna tincidunt cursus. Suspendisse eleifend nec dolor cursus pellentesque. Vivamus tempor blandit mi. Fusce euismod tellus non urna porttitor ullamcorper. Aliquam erat volutpat. Donec eget nisi at risus fringilla gravida vel at dolor. Aenean non dictum eros. Cras tempus, erat nec efficitur dictum, dolor lectus viverra elit, nec sagittis dui dolor ut lectus.
+
+Duis ornare, felis non finibus consequat, tellus massa pulvinar ante, id sagittis ipsum ex id dolor. Nullam finibus, massa ut dapibus sagittis, mi metus interdum dui, bibendum tempus arcu lorem vitae metus. Praesent orci nisi, dignissim in faucibus quis, commodo vel ligula. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent a nisi a enim accumsan posuere vel in nulla. Praesent vitae mollis mauris, sed eleifend mauris. Phasellus sed ipsum quis mi tincidunt luctus. Etiam tempus lacus et diam vulputate, eget ornare magna molestie. Vestibulum facilisis viverra viverra. </string>
+    <string name="open_navigation_drawer">Open</string>
+    <string name="close_navigation_drawer">Close</string>
+
+</resources>
