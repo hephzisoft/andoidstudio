@@ -10,5 +10,17 @@
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:orientation="vertical"></LinearLayout>
+       android:layout_alignParentBottom="true"
+       android:padding="10dp"
+       android:orientation="vertical">
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/white"
+         android:text="Make a nice drink for thr family "/>
+      <Button
+          android:layout_width="wrap_content"
+         android:background="@drawable/input_field_radius"
+          android:layout_height="wrap_content"/>
+   </LinearLayout>
 </RelativeLayout>
