@@ -25,19 +25,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:paddingTop="15dp"
         android:layout_alignParentBottom="true">
+
 
         <Button
             android:id="@+id/taketohomepage"
             android:layout_width="wrap_content"
-            android:paddingLeft="20dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/input_field_radius"
-            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/main_color"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
             android:text="@string/get_started"
             android:textAllCaps="false"
-
-            app:icon="@drawable/ic_baseline_chevron_right_24" />
+            android:textColor="@color/white"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_baseline_chevron_right_24"
+            app:iconTint="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>
