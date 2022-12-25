@@ -2,6 +2,6 @@ package com.hephzisoft.quickmeal.Models;
 
 import java.util.ArrayList;
 
-public class Root {
-    public ArrayList<Recipe> recipes;
+public class RandomRecipeAPIResponse {
+public ArrayList<Recipe> recipes;
 }
