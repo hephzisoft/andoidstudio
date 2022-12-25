@@ -2,6 +2,7 @@ package com.hephzisoft.app_soft_drink_recipes;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
 
 public class AllRecipeActivity extends AppCompatActivity {

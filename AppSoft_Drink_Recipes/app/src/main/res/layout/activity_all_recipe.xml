@@ -15,11 +15,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
-                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
                 android:textStyle="bold"
 
-                android:text="Recipe For Varieties Of Drinks"
-                android:textSize="24sp" />
+                android:text="@string/recipe_for_varieties_of_drinks"
+                android:textSize="24sp"
+                tools:ignore="RtlSymmetry" />
         </LinearLayout>
 
     <LinearLayout
@@ -41,6 +42,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/buttonsViews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/searchView"
@@ -94,6 +96,17 @@
             android:text="@string/cocktail"
             android:textAllCaps="false" />
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/buttonsViews"
+        android:layout_height="wrap_content">
+        <GridView
+            android:layout_width="match_parent"
+            android:id="@+id/gridView"
+            android:numColumns="2"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 
 
