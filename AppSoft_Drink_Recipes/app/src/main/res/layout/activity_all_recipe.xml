@@ -4,24 +4,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AllRecipeActivity">
-        <LinearLayout
+
+    <LinearLayout
+        android:id="@+id/introText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+
             android:layout_width="match_parent"
-            android:id="@+id/introText"
-            android:orientation="horizontal"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingStart="10dp"
+            android:text="@string/recipe_for_varieties_of_drinks"
 
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:paddingStart="10dp"
-                android:textStyle="bold"
-
-                android:text="@string/recipe_for_varieties_of_drinks"
-                android:textSize="24sp"
-                tools:ignore="RtlSymmetry" />
-        </LinearLayout>
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/searchView"
@@ -97,17 +98,16 @@
             android:textAllCaps="false" />
 
     </LinearLayout>
-    <LinearLayout
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
         android:layout_below="@id/buttonsViews"
-        android:layout_height="wrap_content">
-        <GridView
-            android:layout_width="match_parent"
-            android:id="@+id/gridView"
-            android:numColumns="2"
-            android:layout_height="match_parent"/>
-    </LinearLayout>
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp" />
 
 
 </RelativeLayout>
