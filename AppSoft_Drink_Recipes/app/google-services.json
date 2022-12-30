@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "42465292095",
+    "project_id": "app-soft-drink-recipes",
+    "storage_bucket": "app-soft-drink-recipes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:42465292095:android:8061b7e403dfa3cad2ad8a",
+        "android_client_info": {
+          "package_name": "com.hephzisoft.app_soft_drink_recipes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "42465292095-0fsv55a3114vq917aq4r4k73gr80971p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJ6Eq9tYw3l_210Q6skuP3AccPpBFpkZ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "42465292095-0fsv55a3114vq917aq4r4k73gr80971p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

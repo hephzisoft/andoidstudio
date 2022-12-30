@@ -21,8 +21,7 @@
         android:src="@drawable/signup" />
 
     <EditText
-        android:id="@+id/login_username"
-
+        android:id="@+id/login_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/login_image"
@@ -31,18 +30,18 @@
         android:backgroundTint="#ddd"
         android:ems="10"
         android:fontFamily="@font/convergence"
-        android:hint="Username"
-        android:inputType="textPersonName"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
         android:padding="10sp"
         android:paddingLeft="30dp"
-        android:textColorHint="@color/black" />
+        android:textColorHint="#33691E" />
 
     <EditText
         android:id="@+id/login_password"
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/login_username"
+        android:layout_below="@id/login_email"
         android:layout_marginTop="20dp"
         android:background="@drawable/input_field_radius"
         android:backgroundTint="#ddd"
@@ -52,7 +51,7 @@
         android:inputType="textPassword"
         android:padding="10sp"
         android:paddingLeft="30dp"
-        android:textColorHint="@color/black" />
+        android:textColorHint="#33691E" />
 
     <Button
         android:id="@+id/login"
@@ -69,6 +68,11 @@
         android:textColor="@color/main_color"
         android:textSize="20sp"
         app:cornerRadius="30dp" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
 
 
 </RelativeLayout>
