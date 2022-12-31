@@ -1,6 +1,7 @@
 package com.hephzisoft.app_soft_drink_recipes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -38,13 +39,22 @@ public class SignUpActivity extends AppCompatActivity {
         regPassword = findViewById(R.id.signup_password);
         regBtn = findViewById(R.id.signup);
         progressbar = findViewById(R.id.progressbar);
-
+        findViewById(R.id.go_to_login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+            }
+        });
         regBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 registerUser();
             }
         });
+        SharedPreferences preferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("is_logged_in", true);
+        editor.apply();
 
     }
 
@@ -90,7 +100,7 @@ public class SignUpActivity extends AppCompatActivity {
                             // if the user created intent to login activity
                             Intent intent
                                     = new Intent(SignUpActivity.this,
-                                    MainActivity.class);
+                                    AllRecipeActivity.class);
                             startActivity(intent);
                         } else {
 

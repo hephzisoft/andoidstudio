@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/main_color"
     android:padding="10dp"
+    android:id="@+id/login_body"
     tools:context=".LoginActivity">
 
     <Space
@@ -68,11 +69,23 @@
         android:textColor="@color/main_color"
         android:textSize="20sp"
         app:cornerRadius="30dp" />
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
+
+    <Button
+        android:id="@+id/go_to_signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/convergence"
+        android:text="Don't have an account ?"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>

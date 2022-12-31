@@ -6,12 +6,13 @@
     android:layout_height="match_parent"
     android:background="@color/main_color"
     android:padding="10dp"
+    android:id="@+id/signup_body"
     tools:context=".SignUpActivity">
 
     <Space
         android:id="@+id/signup_topSpace"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="170dp" />
 
     <ImageView
         android:id="@+id/signup_image"
@@ -95,6 +96,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone" />
+    <Button
+        android:id="@+id/go_to_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/signup"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/convergence"
+        android:text="Already have an account ?"
+        android:textAllCaps="false" />
 
 
 </RelativeLayout>

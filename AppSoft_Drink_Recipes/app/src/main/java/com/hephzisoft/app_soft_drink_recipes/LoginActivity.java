@@ -1,12 +1,14 @@
 package com.hephzisoft.app_soft_drink_recipes;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -22,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText loginEmail, loginPassword;
     private Button loginBtn;
     private ProgressBar progressBar;
+
     private FirebaseAuth mAuth;
 
     @Override
@@ -38,12 +41,22 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
 
 
+        findViewById(R.id.go_to_signup).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+            }
+        });
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 loginUser();
             }
         });
+        SharedPreferences preferences = getSharedPreferences("login_prefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean("is_logged_in", true);
+        editor.apply();
 
     }
 
@@ -78,8 +91,7 @@ public class LoginActivity extends AppCompatActivity {
                         new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(
-                                    @NonNull Task<AuthResult> task)
-                            {
+                                    @NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(getApplicationContext(),
                                                     "Login successful!!",
@@ -93,11 +105,9 @@ public class LoginActivity extends AppCompatActivity {
                                     // intent to home activity
                                     Intent intent
                                             = new Intent(LoginActivity.this,
-                                            MainActivity.class);
+                                            AllRecipeActivity.class);
                                     startActivity(intent);
-                                }
-
-                                else {
+                                } else {
 
                                     // sign-in failed
                                     Toast.makeText(getApplicationContext(),

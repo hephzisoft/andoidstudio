@@ -51,7 +51,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     }
 
-    //        VERIFY USER\
+//   verify user
     public boolean verifyUser(String username, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("select id from users where username  = ? and password = ?", new String[]{username, password});
