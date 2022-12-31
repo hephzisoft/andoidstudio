@@ -5,6 +5,8 @@ import android.content.Context;
 import com.hephzisoft.quickmeal.Listeners.RandomRecipeResponseListener;
 import com.hephzisoft.quickmeal.Models.RandomRecipeAPIResponse;
 
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -24,9 +26,9 @@ public class RequestManager {
             .baseUrl("https://api.spoonacular.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
-    public void getRandomRecipe(RandomRecipeResponseListener listener){
+    public void getRandomRecipe(RandomRecipeResponseListener listener,List<String> tags){
         CallRandomRecipes callRandomRecipes  = retrofit.create(CallRandomRecipes.class);
-        Call<RandomRecipeAPIResponse> call = callRandomRecipes.callRandomRecipe(context.getString(R.string.api_key),"10");
+        Call<RandomRecipeAPIResponse> call = callRandomRecipes.callRandomRecipe(context.getString(R.string.api_key),"10",tags);
         call.enqueue(new Callback<RandomRecipeAPIResponse>() {
             @Override
             public void onResponse(Call<RandomRecipeAPIResponse> call, Response<RandomRecipeAPIResponse> response) {
@@ -47,7 +49,8 @@ public class RequestManager {
         @GET("recipes/random")
     Call<RandomRecipeAPIResponse> callRandomRecipe(
             @Query("apiKey") String apiKey,
-            @Query("number") String number
+            @Query("number") String number,
+            @Query("tags") List<String> tags
     );
     }
 }

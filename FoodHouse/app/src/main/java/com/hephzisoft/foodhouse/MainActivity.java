@@ -29,11 +29,10 @@ public class MainActivity extends AppCompatActivity {
                 if (count % 30 == 0) {
                     progress++;
                 }
-
                 progressBar.setProgress(progress);
             }
 
-            @Override
+         @Override
             public void onFinish() {
                 String[] db_data = new DBHelper(MainActivity.this).getLoggedInUser();
                 if(Integer.parseInt(db_data[0]) > 0){
