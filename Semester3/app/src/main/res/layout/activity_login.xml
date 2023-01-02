@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icecream"
+    tools:context=".LoginActivity">
+
+    <Button
+        android:id="@+id/open"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/white"
+        android:elevation="0dp"
+        android:outlineProvider="none"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Get Started"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/bottomSheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="0dp"
+            app:layout_behavior="@string/bottom_sheet_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/close"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:outlineProvider="none" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bottomsheet_corner_radius"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Login"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="24sp" />
+
+                    <EditText
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/input_field_radius"
+                        android:backgroundTint="#eee"
+                        android:ems="10"
+                        android:hint="Username"
+                        android:inputType="textPersonName"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="15dp" />
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/input_field_radius"
+                        android:backgroundTint="#eee"
+                        android:ems="10"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingStart="20dp"
+                        android:paddingTop="15dp"
+                        android:paddingEnd="20dp"
+                        android:paddingBottom="15dp" />
+
+                    <Button
+                        android:id="@+id/log_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:backgroundTint="@color/orange"
+                        android:outlineProvider="none"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:text="Login"
+                        app:cornerRadius="8dp" />
+
+                    <Button
+                        android:id="@+id/go_to_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:backgroundTint="@color/white"
+                        android:outlineProvider="none"
+                        android:text="Sign-Up instead"
+                        android:textAllCaps="false"
+                        android:textColor="#0022CC" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
