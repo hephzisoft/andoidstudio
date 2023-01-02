@@ -28,7 +28,6 @@
                 android:layout_height="100dp"
                 android:background="#F8F7F8"
                 android:scaleType="centerCrop"
-                app:shapeAppearance="@style/bottomCornerCurve"
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView

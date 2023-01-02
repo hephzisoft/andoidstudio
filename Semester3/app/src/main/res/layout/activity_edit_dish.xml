@@ -36,7 +36,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:fontFamily="@font/oleo_script"
+                android:fontFamily="@font/convergence"
                 android:text="Edit Menu Item"
                 android:textColor="@color/black"
                 android:textSize="24sp" />
@@ -62,8 +62,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/oleo_script"
-                    android:text="Name of Dish"
+                    android:fontFamily="@font/convergence"
+                    android:text="Drink Name"
                     android:textColor="@color/orange"
                     android:textSize="18sp" />
 
@@ -75,7 +75,7 @@
                     android:background="@drawable/input_field_radius"
                     android:backgroundTint="#eee"
                     android:ems="10"
-                    android:fontFamily="@font/oleo_script"
+                    android:fontFamily="@font/convergence"
                     android:hint="Type here..."
                     android:inputType="textPersonName"
                     android:paddingStart="20dp"
@@ -84,6 +84,7 @@
                     android:paddingBottom="15dp" />
 
             </LinearLayout>
+
 
             <Space
                 android:layout_width="10dp"
@@ -100,7 +101,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
-                    android:fontFamily="@font/oleo_script"
+                    android:fontFamily="@font/convergence"
                     android:text="Image URL"
                     android:textColor="@color/orange"
                     android:textSize="18sp" />
@@ -113,7 +114,7 @@
                     android:background="@drawable/input_field_radius"
                     android:backgroundTint="#eee"
                     android:ems="10"
-                    android:fontFamily="@font/oleo_script"
+                    android:fontFamily="@font/convergence"
                     android:hint="Type here..."
                     android:inputType="textPersonName"
                     android:paddingStart="20dp"
@@ -129,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/oleo_script"
+            android:fontFamily="@font/convergence"
             android:text="Ingredients"
             android:textColor="@color/orange"
             android:textSize="18sp" />
@@ -142,7 +143,7 @@
             android:background="@drawable/input_field_radius"
             android:backgroundTint="#eee"
             android:ems="10"
-            android:fontFamily="@font/oleo_script"
+            android:fontFamily="@font/convergence"
             android:gravity="start|top"
             android:hint="Type here..."
             android:inputType="textMultiLine"
@@ -157,7 +158,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/oleo_script"
+            android:fontFamily="@font/convergence"
             android:text="Preparation Process"
             android:textColor="@color/orange"
             android:textSize="18sp" />
@@ -170,7 +171,7 @@
             android:background="@drawable/input_field_radius"
             android:backgroundTint="#eee"
             android:ems="10"
-            android:fontFamily="@font/oleo_script"
+            android:fontFamily="@font/convergence"
             android:gravity="start|top"
             android:hint="Type here..."
             android:inputType="textMultiLine"
@@ -191,7 +192,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:backgroundTint="@color/splash_screen_background"
-            android:fontFamily="@font/oleo_script"
+            android:fontFamily="@font/convergence"
             android:outlineProvider="none"
             android:text="Edit Dish"
             android:textAllCaps="false"
