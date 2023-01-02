@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_body"
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/main_color"
     android:padding="10dp"
-    android:layout_height="match_parent"
     tools:context=".LoginActivity">
+
     <Space
         android:id="@+id/login_topSpace"
         android:layout_width="match_parent"
@@ -32,6 +33,7 @@
         android:fontFamily="@font/convergence"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:padding="10sp"
         android:paddingLeft="30dp"
         android:textColorHint="#33691E" />
@@ -49,6 +51,7 @@
         android:fontFamily="@font/convergence"
         android:hint="Password"
         android:inputType="textPassword"
+        android:minHeight="48dp"
         android:padding="10sp"
         android:paddingLeft="30dp"
         android:textColorHint="#33691E" />
@@ -70,7 +73,6 @@
         app:cornerRadius="30dp" />
 
 
-
     <Button
         android:id="@+id/go_to_signup"
         android:layout_width="wrap_content"
@@ -81,8 +83,6 @@
         android:fontFamily="@font/convergence"
         android:text="Don't have an account ?"
         android:textAllCaps="false" />
-
-
 
 
 </RelativeLayout>
