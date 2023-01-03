@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Foodi3</string>
+    <string name="cocoa">Cocoa</string>
+    <string name="cocktail">Cocktail</string>
+    <string name="shakes">Shakes</string>
+    <string name="soft_drink">Soft Drinks</string>
 </resources>

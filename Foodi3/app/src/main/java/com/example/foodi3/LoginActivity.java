@@ -7,13 +7,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.snackbar.Snackbar;
 
 public class LoginActivity extends AppCompatActivity {
 
-    ConstraintLayout constraintLayout;
+    RelativeLayout relativeLayout;
     BottomSheetBehavior<View> bottomSheetBehavior;
     EditText username, password;
     DBHelper dbHelper;
@@ -23,16 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-//        BOTTOM SHEET BEHAVIOR
-        bottomSheetBehavior = BottomSheetBehavior.from(findViewById(R.id.bottomSheet));
 
-        findViewById(R.id.open).setOnClickListener(v -> {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-        });
-
-        findViewById(R.id.close).setOnClickListener(v -> {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-        });
 
         findViewById(R.id.go_to_signup).setOnClickListener(v -> {
             startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
@@ -41,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
 //        LOGIN FUNCTION
-        constraintLayout = findViewById(R.id.login_body);
+        relativeLayout = findViewById(R.id.login_body);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         dbHelper = new DBHelper(LoginActivity.this);
@@ -51,11 +43,11 @@ public class LoginActivity extends AppCompatActivity {
             String password_text = password.getText().toString();
 
             if (username_text.isEmpty() || password_text.isEmpty()){
-                Snackbar.make(constraintLayout, String.format("Please Fill In The Fields Provided."), Snackbar.LENGTH_SHORT).show();
+                Snackbar.make(relativeLayout, String.format("Please Fill In The Fields Provided."), Snackbar.LENGTH_SHORT).show();
             }else {
                 Boolean user_exists = dbHelper.verifyUser(username_text, password_text);
                 if (!user_exists){
-                    Snackbar.make(constraintLayout, String.format("User Does Not Exist"), Snackbar.LENGTH_SHORT).show();
+                    Snackbar.make(relativeLayout, String.format("User Does Not Exist"), Snackbar.LENGTH_SHORT).show();
                 }else {
                     startActivity(new Intent(LoginActivity.this, HomePageActivity.class).putExtra("user", username_text));
                     finish();

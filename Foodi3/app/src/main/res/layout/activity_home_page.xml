@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="#f5f5f5"
     tools:context=".HomePageActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -22,10 +22,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:menu="@menu/toolbar_menu"
-        app:title="Welcome Username" />
+        app:title="Welcome Username"
+        app:titleTextColor="@color/main_color" />
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -57,6 +59,66 @@
                 android:inputType="textPersonName"
                 android:padding="15dp" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+
+
+                >
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
+
+                    android:text="@string/soft_drink"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
+
+                    android:text="@string/shakes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="5dp"
+
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
+                    android:text="@string/cocoa"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <Space
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/main_color"
+                    android:text="@string/cocktail"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
             <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                 android:id="@+id/refresh"
                 android:layout_width="match_parent"
@@ -77,6 +139,7 @@
 
     </RelativeLayout>
 
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
@@ -91,7 +154,7 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:tint="@color/white"
-            app:backgroundTint="@color/orange"
+            app:backgroundTint="@color/main_color"
             app:layout_anchor="@id/bottomAppBar"
             app:layout_anchorGravity="center"
             app:srcCompat="@drawable/ic_baseline_add_24" />
@@ -110,6 +173,7 @@
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
                 android:outlineProvider="none"
+                app:itemTextColor="@color/main_color"
                 app:menu="@menu/bottom_nav_menu" />
 
         </com.google.android.material.bottomappbar.BottomAppBar>

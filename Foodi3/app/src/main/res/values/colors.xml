@@ -9,5 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="splash_screen_background">#FFECCC</color>
     <color name="orange">#F9B337</color>
+    <color name="main_color">#3e8a0c</color>
 
 </resources>
