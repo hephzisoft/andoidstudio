@@ -82,7 +82,9 @@
                     android:paddingStart="20dp"
                     android:paddingTop="15dp"
                     android:paddingEnd="20dp"
-                    android:paddingBottom="15dp" />
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/main_color"
+                    android:textColorHint="@color/main_color" />
 
             </LinearLayout>
 
@@ -120,10 +122,13 @@
                     android:paddingStart="20dp"
                     android:paddingTop="15dp"
                     android:paddingEnd="20dp"
-                    android:paddingBottom="15dp" />
+                    android:paddingBottom="15dp"
+                    android:textColor="@color/main_color"
+                    android:textColorHint="@color/main_color" />
 
             </LinearLayout>
         </LinearLayout>
+
         <TextView
             android:id="@+id/textView30"
             android:layout_width="match_parent"
@@ -133,6 +138,7 @@
             android:text="Drink Type"
             android:textColor="@color/main_color"
             android:textSize="18sp" />
+
         <EditText
             android:id="@+id/drinktype"
             android:layout_width="match_parent"
@@ -147,7 +153,9 @@
             android:paddingStart="20dp"
             android:paddingTop="15dp"
             android:paddingEnd="20dp"
-            android:paddingBottom="15dp"/>
+            android:paddingBottom="15dp"
+            android:textColor="@color/main_color"
+            android:textColorHint="@color/main_color" />
 
         <TextView
             android:id="@+id/textView3"
@@ -165,6 +173,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/input_field_radius"
+
             android:backgroundTint="#eee"
             android:ems="10"
             android:fontFamily="@font/oleo_script"
@@ -175,7 +184,9 @@
             android:paddingStart="20dp"
             android:paddingTop="15dp"
             android:paddingEnd="20dp"
-            android:paddingBottom="15dp" />
+            android:paddingBottom="15dp"
+            android:textColor="@color/main_color"
+            android:textColorHint="@color/main_color" />
 
         <TextView
             android:id="@+id/textView6"
@@ -199,11 +210,13 @@
             android:gravity="start|top"
             android:hint="Type here..."
             android:inputType="textMultiLine"
+            android:textColor="@color/main_color"
             android:lines="5"
             android:paddingStart="20dp"
             android:paddingTop="15dp"
             android:paddingEnd="20dp"
-            android:paddingBottom="15dp" />
+            android:paddingBottom="15dp"
+            android:textColorHint="@color/main_color" />
 
         <Space
             android:layout_width="match_parent"

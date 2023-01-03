@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table users (id integer primary key autoincrement, username text unique, email text, password text, is_loggedin boolean)");
-        db.execSQL("create table dishes (id integer primary key autoincrement, name text, ingredients text, process text, image_url text, drinktype text)");
+        db.execSQL("create table dishes (id integer primary key autoincrement, name text, ingredients text, process text, drinktype text, image_url text)");
     }
 
     @Override
@@ -56,7 +56,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
             long result = db.update("users", contentValues, "username = ? and password = ?", new String[]{username, password});
             if (result == -1)
-                Toast.makeText(context, "An error occurred while fetching data.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "An error occured while fetching data.", Toast.LENGTH_SHORT).show();
             return true;
 
         } else return false;
@@ -98,7 +98,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public Cursor getDishes() {
         SQLiteDatabase db = this.getWritableDatabase();
 
-        return db.rawQuery("select id, name, image_url, ingredients, process, drinktype  from dishes", new String[]{});
+        return db.rawQuery("select id, name, image_url, ingredients, process, drinktype from dishes", new String[]{});
     }
 
     //    DELETE DISH
@@ -124,6 +124,7 @@ public class DBHelper extends SQLiteOpenHelper {
         cv.put("process", process);
         cv.put("image_url", image_url);
         cv.put("drinktype", drinktype);
+
         db.update("dishes", cv, "id = ?", new String[]{String.valueOf(id)});
 
     }
