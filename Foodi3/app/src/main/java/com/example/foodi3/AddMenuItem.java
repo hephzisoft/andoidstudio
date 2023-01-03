@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 public class AddMenuItem extends AppCompatActivity {
 
-    EditText name, ingredients, process, image_url;
+    EditText name, ingredients, process, image_url,drinktype;
     DBHelper db;
 
     @Override
@@ -20,6 +20,7 @@ public class AddMenuItem extends AppCompatActivity {
         ingredients = findViewById(R.id.dish_ingredients);
         process = findViewById(R.id.dish_process);
         image_url = findViewById(R.id.dish_image_url);
+        drinktype  = findViewById(R.id.drinktype);
 
         db = new DBHelper(this);
 
@@ -28,11 +29,11 @@ public class AddMenuItem extends AppCompatActivity {
         });
 
         findViewById(R.id.create_dish).setOnClickListener(v -> {
-            if (name.getText().toString().isEmpty() || ingredients.getText().toString().isEmpty() || process.getText().toString().isEmpty() || image_url.getText().toString().isEmpty()){
+            if (name.getText().toString().isEmpty() || ingredients.getText().toString().isEmpty() || process.getText().toString().isEmpty() || image_url.getText().toString().isEmpty()|| drinktype.getText().toString().isEmpty()){
                 Toast.makeText(this, "Please fill all the input fields provided", Toast.LENGTH_SHORT).show();
             }else {
                 try {
-                    db.createDish(name.getText().toString(), ingredients.getText().toString(), process.getText().toString(), image_url.getText().toString());
+                    db.createDish(name.getText().toString(), ingredients.getText().toString(), process.getText().toString(), image_url.getText().toString(),drinktype.getText().toString());
                     onBackPressed();
                 }catch (Exception e){
                     e.printStackTrace();

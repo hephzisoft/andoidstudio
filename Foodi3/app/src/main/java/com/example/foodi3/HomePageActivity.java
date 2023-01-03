@@ -48,7 +48,7 @@ public class HomePageActivity extends AppCompatActivity {
 
         pull_data();
 
-        ((SwipeRefreshLayout) findViewById(R.id.refresh)).setColorSchemeColors(Color.parseColor("#F9B337"));
+        ((SwipeRefreshLayout) findViewById(R.id.refresh)).setColorSchemeColors(Color.parseColor("#3e8a0c"));
         ((SwipeRefreshLayout) findViewById(R.id.refresh)).setOnRefreshListener(() -> {
             ((SwipeRefreshLayout) findViewById(R.id.refresh)).setRefreshing(false);
             pull_data();
@@ -62,6 +62,7 @@ public class HomePageActivity extends AppCompatActivity {
         ArrayList<String> image_url_of_dishes = new ArrayList<>();
         ArrayList<String> ingredients_of_dishes = new ArrayList<>();
         ArrayList<String> process_of_making_dishes = new ArrayList<>();
+        ArrayList<String> drinkTypes_of_dish = new ArrayList<>();
 
         Cursor cursor = db.getDishes();
         while (cursor.moveToNext()) {
@@ -70,11 +71,12 @@ public class HomePageActivity extends AppCompatActivity {
             image_url_of_dishes.add(cursor.getString(2));
             ingredients_of_dishes.add(cursor.getString(3));
             process_of_making_dishes.add(cursor.getString(4));
+            drinkTypes_of_dish.add(cursor.getString(5));
         }
 
         GridView grid = findViewById(R.id.grid);
 
-        DishAdapter dishAdapter = new DishAdapter(this, ids_of_dishes, names_of_dishes, image_url_of_dishes, ingredients_of_dishes, process_of_making_dishes);
+        DishAdapter dishAdapter = new DishAdapter(this, ids_of_dishes, names_of_dishes, image_url_of_dishes, ingredients_of_dishes, process_of_making_dishes, drinkTypes_of_dish);
 
         grid.setAdapter(dishAdapter);
 
@@ -91,18 +93,23 @@ public class HomePageActivity extends AppCompatActivity {
                 ArrayList<String> images = new ArrayList<>();
                 ArrayList<String> ingredients = new ArrayList<>();
                 ArrayList<String> processes = new ArrayList<>();
+                ArrayList<String> drinkType = new ArrayList<>();
 
-                for (int i = 0; i < names_of_dishes.size(); i++){
-                    if (names_of_dishes.get(i).toLowerCase().contains(s.toString().toLowerCase())){
+                for (int i = 0; i < names_of_dishes.size(); i++) {
+                    if (names_of_dishes.get(i).toLowerCase().contains(s.toString().toLowerCase())) {
                         ids.add(ids_of_dishes.get(i));
                         names.add(names_of_dishes.get(i));
                         images.add(image_url_of_dishes.get(i));
                         ingredients.add(ingredients_of_dishes.get(i));
                         processes.add(process_of_making_dishes.get(i));
+                        drinkType.add(drinkTypes_of_dish.get(i));
 
-                        DishAdapter dishAdapter = new DishAdapter(HomePageActivity.this, ids, names, images, ingredients, processes);
+                        DishAdapter dishAdapter = new DishAdapter(HomePageActivity.this, ids, names, images, ingredients, processes, drinkType);
                         grid.setAdapter(dishAdapter);
                     }
+
+
+
                 }
             }
 
@@ -117,18 +124,20 @@ public class HomePageActivity extends AppCompatActivity {
 
 class DishAdapter extends BaseAdapter {
 
+
     ArrayList<Integer> id;
-    ArrayList<String> name, image_url, ingredients, process;
+    ArrayList<String> name, image_url, ingredients, process,drinkTypes;
     Context context;
     LayoutInflater inflater;
 
-    public DishAdapter(Context context, ArrayList<Integer> id, ArrayList<String> name, ArrayList<String> image_url, ArrayList<String> ingredients, ArrayList<String> process) {
+    public DishAdapter(Context context, ArrayList<Integer> id, ArrayList<String> name, ArrayList<String> image_url, ArrayList<String> ingredients, ArrayList<String> process, ArrayList<String> drinkTypes) {
         this.id = id;
         this.name = name;
         this.image_url = image_url;
         this.ingredients = ingredients;
         this.process = process;
         this.context = context;
+        this.drinkTypes = drinkTypes;
 
         inflater = (LayoutInflater.from(context.getApplicationContext()));
     }
@@ -165,7 +174,8 @@ class DishAdapter extends BaseAdapter {
                     .putExtra("name", name.get(position))
                     .putExtra("image", image_url.get(position))
                     .putExtra("ingredients", ingredients.get(position))
-                    .putExtra("process", process.get(position)));
+                    .putExtra("process", process.get(position)).putExtra("drinktype",drinkTypes.get(position)));
+
         });
 
         return view;
