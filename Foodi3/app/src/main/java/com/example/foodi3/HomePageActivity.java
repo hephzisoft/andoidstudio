@@ -1,13 +1,16 @@
 package com.example.foodi3;
 
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -23,6 +26,9 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class HomePageActivity extends AppCompatActivity {
 
@@ -46,15 +52,22 @@ public class HomePageActivity extends AppCompatActivity {
 
         db = new DBHelper(HomePageActivity.this);
 
-        pull_data();
+        SharedPreferences sharedPreferences = getSharedPreferences("my_preferences", MODE_PRIVATE);
+        Set<String> favoriteItemIds = sharedPreferences.getStringSet("favorite_items", new HashSet<String>());
+
+
 
         ((SwipeRefreshLayout) findViewById(R.id.refresh)).setColorSchemeColors(Color.parseColor("#3e8a0c"));
         ((SwipeRefreshLayout) findViewById(R.id.refresh)).setOnRefreshListener(() -> {
             ((SwipeRefreshLayout) findViewById(R.id.refresh)).setRefreshing(false);
             pull_data();
         });
-
     }
+
+
+
+
+
 
     public void pull_data() {
         ArrayList<Integer> ids_of_dishes = new ArrayList<>();
@@ -109,7 +122,6 @@ public class HomePageActivity extends AppCompatActivity {
                     }
 
 
-
                 }
             }
 
@@ -120,13 +132,15 @@ public class HomePageActivity extends AppCompatActivity {
         });
 
     }
+
+
 }
 
 class DishAdapter extends BaseAdapter {
 
 
     ArrayList<Integer> id;
-    ArrayList<String> name, image_url, ingredients, process,drinkTypes;
+    ArrayList<String> name, image_url, ingredients, process, drinkTypes;
     Context context;
     LayoutInflater inflater;
 
@@ -174,7 +188,7 @@ class DishAdapter extends BaseAdapter {
                     .putExtra("name", name.get(position))
                     .putExtra("image", image_url.get(position))
                     .putExtra("ingredients", ingredients.get(position))
-                    .putExtra("process", process.get(position)).putExtra("drinktype",drinkTypes.get(position)));
+                    .putExtra("process", process.get(position)).putExtra("drinktype", drinkTypes.get(position)));
 
         });
 
